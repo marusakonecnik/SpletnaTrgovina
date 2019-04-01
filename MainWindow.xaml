@@ -75,7 +75,7 @@
 
 
             <Menu HorizontalAlignment="Left"  Grid.Row="1"  Width="120" Margin="0,52,0,0" >
-                <MenuItem Header="IZBERI ODDELEK" Height="29" Width="120" >
+                <MenuItem Header="IZBERI ODDELEK v" Height="29" Width="120" >
 
                     <MenuItem Header="Gospodinjski aparati">
                         <MenuItem.Icon>
