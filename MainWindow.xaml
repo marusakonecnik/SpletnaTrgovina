@@ -1,0 +1,241 @@
+﻿<Window x:Class="SpletnaTrgovina.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d"
+        
+        Title="Mimovrste"  MinWidth="700" MaxWidth="1300" Width="778.8"  MinHeight="500" Height="529.2"  Loaded="Window_Loaded">
+
+    <Viewbox MinWidth="750" MinHeight="500" >
+        <Grid Background="#FFDDE6EE" ShowGridLines="False" Margin="0,0,-6.2,-3"  >
+
+            <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="129*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>-->
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="130.4"/>
+
+                <ColumnDefinition/>
+
+                <ColumnDefinition Width="125.6"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="81.6"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+
+            <Border Grid.Row="0" Background="AliceBlue" Margin="133,0,97.267,0.6" Grid.ColumnSpan="3"/>
+            <Border Grid.Row="0" Grid.Column="1" Background="AliceBlue" Margin="496.2,0,0.4,0.6" Grid.ColumnSpan="2"/>
+            <Border Grid.Row="0" Grid.Column="0" Background="AliceBlue" Margin="0,-1,395.4,1" Grid.ColumnSpan="2"></Border>
+
+            <Menu Width="100" HorizontalAlignment="Left">
+                <MenuItem Header="DATOTEKA"  Background="AliceBlue" Width="100" >
+                    <MenuItem Header="Naloži" />
+                    <MenuItem Header="Izhod" Click="MenuItem_Click"/>
+
+                </MenuItem>
+            </Menu>
+
+            <Image Source="slike/logo.png" Name="logo" HorizontalAlignment="Left" Margin="0,2,0,28" Width="120" Grid.Row="1" >
+
+                <Image.RenderTransform>
+                    <RotateTransform x:Name="AnimatedRotateTransform" Angle="0" CenterX="50" CenterY="30" />
+                </Image.RenderTransform>
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="MouseDown">
+                        <BeginStoryboard >
+                            <Storyboard>
+                                <DoubleAnimation  Storyboard.TargetName="AnimatedRotateTransform" 
+                                                 Storyboard.TargetProperty="Angle" 
+                                                 By="10"        
+                                                 To="360" 
+                                                 Duration="0:0:0.5" 
+                                                 FillBehavior="Stop" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                </Image.Triggers>
+            </Image>
+
+
+            <Menu HorizontalAlignment="Left"  Grid.Row="1"  Width="120" Margin="0,52,0,0" >
+                <MenuItem Header="IZBERI ODDELEK" Height="29" Width="120" >
+
+                    <MenuItem Header="Gospodinjski aparati">
+                        <MenuItem.Icon>
+                            <Image Source="slike/oven.png" />
+                        </MenuItem.Icon>
+                        <MenuItem Header="Bela tehnika" >
+                            <MenuItem.Icon>
+                                <Image Source="slike/1.png" />
+                            </MenuItem.Icon>
+
+                            <MenuItem Header="Pralni stroj">
+                                <MenuItem.Icon>
+                                    <Image Source="slike/2.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Sušilni stroj">
+                                <MenuItem.Icon>
+                                    <Image Source="slike/1.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Mali gospodinjski aparati">
+                            <MenuItem.Icon>
+                                <Image Source="slike/blender.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Računalništvo in telefonija">
+                        <MenuItem.Icon>
+                            <Image Source="slike/4.png" />
+                        </MenuItem.Icon>
+                        <MenuItem Header="Mobilni telefoni">
+                            <MenuItem.Icon>
+                                <Image Source="slike/3.png" />
+                            </MenuItem.Icon>
+                            <MenuItem Header="Samsung">
+                                <MenuItem.Icon>
+                                    <Image Source="slike/3.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Huawei">
+                                <MenuItem.Icon>
+                                    <Image Source="slike/3.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Računalništvo">
+                            <MenuItem.Icon>
+                                <Image Source="slike/4.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                </MenuItem>
+
+
+
+            </Menu>
+            <WrapPanel HorizontalAlignment="Left" Height="20" Margin="0.6,2,0,0" VerticalAlignment="Top" Width="501" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1">
+                <Button Name="domacastran"   Width="103" Margin="0,0,0,0" BorderThickness="0">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                    <WrapPanel>
+                        <Image Source="slike/home.png" Height="15" Width="15" HorizontalAlignment="Left"  />
+                        <TextBlock Text=" Domača stran"/>
+                    </WrapPanel>
+
+
+                </Button>
+                <Button Name="kontakt"  Width="75" Margin="100,0,0,0" BorderThickness="0">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                    <WrapPanel>
+                        <Image Source="slike/contact.png" Height="15" Width="15" HorizontalAlignment="Left"  />
+                        <TextBlock Text=" Kontakt" Width="46"/>
+                    </WrapPanel>
+                </Button>
+                <Button Name="zadnjenovosti" Width="121" Margin="100,0,0,0" BorderThickness="0" Click="Zadnjenovosti_Click">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                    <WrapPanel>
+                        <Image Source="slike/new.png" Height="37" Width="23" HorizontalAlignment="Left"  />
+                        <TextBlock Text=" Zadnje novosti" Width="87"/>
+                    </WrapPanel>
+                </Button>
+
+            </WrapPanel>
+            <TextBox Name="iskanje" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Height="28" Margin="1,52.2,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.Column="1"/>
+            <Button Name="isci" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="200.4,52.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="64">
+                <WrapPanel Width="64">
+                    <Image Source="slike/search.png" Height="24" Width="17" HorizontalAlignment="Left"  />
+                    <TextBlock Width="42" Text=" ISKANJE" FontSize="10" Margin="0,4,0,0">
+
+                    </TextBlock>
+                </WrapPanel>
+            </Button>
+
+
+            <Button Name="kosara" Grid.Column="2" HorizontalAlignment="Left" Height="28" Margin="24.267,35.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="83" Click="Kosara_Click">
+                <WrapPanel>
+                    <Image Source="slike/shopping-cart.png" Height="15" Width="15" HorizontalAlignment="Left"  />
+                    <TextBlock Text=" KOŠARICA" FontSize="10" />
+                </WrapPanel>
+
+            </Button>
+            <StackPanel HorizontalAlignment="Left" Height="95" VerticalAlignment="Bottom" Width="152" Margin="0,0,0,268.2" Grid.ColumnSpan="2" Grid.Row="2">
+                <Label FontWeight="Bold">Nalepka</Label>
+                <CheckBox Name="checkboxNovo" Content="Novo" Checked="CheckBox_Checked"/>
+                <CheckBox Name="CheckboxRabljeno" Content="Rabljeno" Checked="CheckBox_Checked_1" Unchecked="CheckboxRabljeno_Unchecked" />
+                <CheckBox Name="CheckboxTestno" Content="Testno" Checked="CheckBox_Checked_2"/>
+                <CheckBox Name="CheckBoxRabljeno" Content="Priporočamo" Checked="CheckBox_Checked_3"/>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Left" Height="24" Margin="0,117.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2">
+
+
+                <ComboBox x:Name="comboBox_cena" DropDownClosed="Isk_Leto_DropDownClosed" HorizontalAlignment="Left" Width="133" >
+                    <ComboBoxItem IsSelected="True" Content="Izberite ceno"/>
+                    <ComboBoxItem Content="0€-100€" />
+                    <ComboBoxItem Content="100€-200€"/>
+                    <ComboBoxItem Content="200€-500€"/>
+                    <ComboBoxItem Content="500€-1000€"/>
+                    <ComboBoxItem Content="1000€-2000€"/>
+                </ComboBox>
+
+            </StackPanel>
+            
+            <ListView  Name="artikli" HorizontalAlignment="Left" Height="363" Grid.Row="2" VerticalAlignment="Top" Width="490" Margin="1,6,0,0" Grid.Column="1" Grid.RowSpan="2">
+                <ListView.Resources>
+                    <Style  TargetType="{x:Type ListViewItem}">
+                        <EventSetter Event="MouseDoubleClick" Handler="ListItem_MouseDoubleClick" />
+                    </Style>
+                  
+                </ListView.Resources>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ListViewItem>
+                            <WrapPanel>
+                                <Image Name ="slikaArtikla" Source="{Binding Slika}" Width="60" Height="60" ></Image>
+                                
+                                <TextBlock  Text="{Binding Opis}" FontWeight="Bold" Visibility="{Binding IsSupposedToShow}" >
+                                        <LineBreak/>
+                                </TextBlock>
+                                                          
+                            </WrapPanel>
+                        </ListViewItem>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StatusBar HorizontalAlignment="Left" Height="20" Margin="0,0,0,-0.6" Grid.Row="3" VerticalAlignment="Bottom" Grid.ColumnSpan="3">
+                <StatusBarItem HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" Margin="0,-5,0,3" Width="747">
+
+                    <TextBlock Name="text" Text="Karmen Bregač, Izobraževalna matematika in izobraževalno računalništvo" Width="397"  Height="22" HorizontalAlignment="Right"/>
+                </StatusBarItem>
+            </StatusBar>
+            <Label Content="0" Name="timer" FontSize="12" Grid.Column="2" HorizontalContentAlignment="Right" HorizontalAlignment="Center" Height="23" Margin="77.4,17,18.2,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="1.28,0.638" Grid.RowSpan="2"/>
+            <Label Content="s" Grid.Column="2" FontSize="11" HorizontalContentAlignment="Left" Height="22" Margin="107.4,0.4,0.2,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+        </Grid>
+    </Viewbox>
+</Window>

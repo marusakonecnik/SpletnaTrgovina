@@ -1,0 +1,14 @@
+D:\SpletnaTrgovina\SpletnaTrgovina\bin\Debug\SpletnaTrgovina.exe.config
+D:\SpletnaTrgovina\SpletnaTrgovina\bin\Debug\SpletnaTrgovina.exe
+D:\SpletnaTrgovina\SpletnaTrgovina\bin\Debug\SpletnaTrgovina.pdb
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\MainWindow.baml
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\MainWindow.g.cs
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\App.g.cs
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina_MarkupCompile.cache
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina.g.resources
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina.Properties.Resources.resources
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina.csproj.GenerateResource.cache
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina.csproj.CoreCompileInputs.cache
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina.exe
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina.pdb
+D:\SpletnaTrgovina\SpletnaTrgovina\obj\Debug\SpletnaTrgovina.csprojAssemblyReference.cache
